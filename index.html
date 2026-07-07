@@ -4,77 +4,424 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JF Sucatas - Compramos Sucata | Melhor Preço da Região</title>
+<meta name="description" content="JF Sucatas - Compramos todo tipo de sucata. Cobre, alumínio, ferro, plástico, PET e muito mais. Pagamos o melhor preço da região!">
+<meta property="og:title" content="JF Sucatas - Compramos Sucata | Melhor Preço em Dinheiro">
+<meta property="og:description" content="Pagamos o melhor preço da região! Compramos ferro, cobre, alumínio, plástico e muito mais.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?fm=jpg&q=80&w=1200&h=630&fit=crop">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://site.zapia.com/ax4yiipe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?fm=jpg&q=80&w=1200&h=630&fit=crop">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--orange:#f57c00;--orange-dark:#e65100;--dark:#1a1a1a;--darker:#0d0d0d;--white:#f5f5f5;--gold:#ffb300}
-body{font-family:sans-serif;background:var(--darker);color:var(--white);line-height:1.6}
+:root{--orange:#f57c00;--orange-dark:#e65100;--dark:#1a1a1a;--darker:#0d0d0d;--gray:#333;--light-gray:#555;--white:#f5f5f5;--gold:#ffb300}
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;background:var(--darker);color:var(--white);line-height:1.6}
 
 /* HERO */
-.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;background:#111}
-.hero-logo{font-size:3rem;font-weight:900;color:var(--orange);margin-bottom:1rem}
-.hero-sub{font-size:1.5rem;color:var(--gold);margin-bottom:1rem}
-.hero-btn{display:inline-block;background:var(--orange);color:black;padding:1rem 2rem;border-radius:50px;font-weight:700;text-decoration:none;margin-top:1rem}
+.hero{
+min-height:100vh;
+background:linear-gradient(135deg,rgba(0,0,0,.92),rgba(0,0,0,.7)),url(https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?fm=jpg&q=80&w=1920&h=1080&fit=crop) center/cover fixed;
+display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;position:relative}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,var(--darker))}
+.hero-logo{font-size:4.5rem;font-weight:900;letter-spacing:4px;text-transform:uppercase;color:var(--orange);text-shadow:0 0 40px rgba(245,124,0,.3);margin-bottom:.5rem}
+.hero-sub{font-size:1.8rem;font-weight:700;color:var(--gold);margin-bottom:1rem}
+.hero-tagline{font-size:1.3rem;color:#aaa;max-width:600px;margin-bottom:2rem}
+.hero-btn{display:inline-block;background:var(--orange);color:var(--dark);padding:1rem 3rem;border-radius:50px;font-size:1.2rem;font-weight:700;text-decoration:none;transition:.3s;border:2px solid var(--orange)}
+.hero-btn:hover{background:transparent;color:var(--orange);transform:scale(1.05)}
+.hero-price{font-size:1.1rem;color:var(--gold);margin-top:1.5rem;font-weight:600}
+
+/* FLOATING WHATSAPP */
+.whatsapp-float{
+position:fixed;bottom:25px;left:15px;z-index:9999999;background:#25d366;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:.3s;text-decoration:none;animation:pulse 2s infinite;cursor:pointer}
+.whatsapp-float:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.6)}
+.whatsapp-float svg{width:26px;height:26px;fill:#fff;display:block;pointer-events:none}
+@keyframes pulse{0%{box-shadow:0 4px 20px rgba(37,211,102,.5)}50%{box-shadow:0 4px 30px rgba(37,211,102,.7)}100%{box-shadow:0 4px 20px rgba(37,211,102,.5)}}
 
 /* SECTIONS */
-.section{padding:3rem 1rem;max-width:800px;margin:0 auto}
-.section-title{text-align:center;font-size:2rem;color:var(--orange);margin-bottom:2rem}
+.section{padding:4rem 1rem;max-width:1400px;margin:0 auto}
+.section-title{font-size:2.5rem;font-weight:800;text-align:center;margin-bottom:.5rem;text-transform:uppercase;position:relative;display:inline-block;left:50%;transform:translateX(-50%)}
+.section-title::after{content:'';display:block;width:80px;height:4px;background:var(--orange);margin:.8rem auto 0;border-radius:2px}
+.section-desc{text-align:center;color:#888;margin-bottom:3rem;font-size:1.1rem}
 
 /* CATEGORY */
-.category{margin-bottom:2rem;background:#222;padding:1.5rem;border-radius:10px}
-.category-name{font-size:1.5rem;font-weight:bold;margin-bottom:1rem;color:var(--orange)}
-.materials-grid{display:grid;gap:10px}
-.material-item{display:block;background:#333;padding:1rem;border-radius:5px;color:white;text-decoration:none;transition:0.3s}
-.material-item:hover{background:var(--orange);color:black}
+.category{margin-bottom:3rem;background:linear-gradient(135deg,#1a1a1a,#222);border-radius:16px;overflow:hidden;border:1px solid #2a2a2a;transition:.3s}
+.category:hover{border-color:var(--orange);box-shadow:0 0 30px rgba(245,124,0,.1)}
+.category-header{position:relative;height:250px;overflow:hidden;display:flex;align-items:flex-end;padding:2rem}
+.category-header img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:.5}
+.category-header .overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(transparent 30%,rgba(0,0,0,.95))}
+.category-name{position:relative;z-index:2;font-size:2.2rem;font-weight:800;color:var(--orange);text-shadow:0 2px 10px rgba(0,0,0,.8)}
+.category-count{position:relative;z-index:2;color:#aaa;font-size:.95rem;margin-top:.3rem}
 
-/* WHATSAPP FLOAT */
-.whatsapp-float{position:fixed;bottom:20px;left:20px;background:#25d366;padding:15px;border-radius:50px;color:white;text-decoration:none;font-weight:bold}
+/* MATERIALS GRID */
+.materials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;padding:1.5rem}
+.material-item{display:block;background:#252525;border-radius:10px;padding:.8rem 1rem;text-decoration:none;color:var(--white);border:1px solid #333;transition:.25s;position:relative;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.material-item::before{content:'💬';margin-right:8px;font-size:.9rem}
+.material-item:hover{background:var(--orange);color:var(--dark);border-color:var(--orange);transform:translateY(-2px);box-shadow:0 4px 15px rgba(245,124,0,.25)}
+.material-item .mat-name{font-weight:600;font-size:.95rem}
+
+/* HOW IT WORKS */
+.how-works{background:linear-gradient(135deg,#111,#1a1a1a);padding:4rem 1rem;text-align:center}
+.how-works h2{font-size:2.5rem;font-weight:800;margin-bottom:3rem;text-transform:uppercase}
+.steps{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;max-width:1000px;margin:0 auto}
+.step{flex:1;min-width:200px;max-width:300px;padding:2rem;background:#1a1a1a;border-radius:12px;border:1px solid #2a2a2a;transition:.3s}
+.step:hover{border-color:var(--orange)}
+.step-icon{font-size:3rem;margin-bottom:1rem}
+.step h3{font-size:1.2rem;margin-bottom:.5rem;color:var(--orange)}
+.step p{color:#999;font-size:.95rem}
+
+/* ABOUT BANNER */
+.about-banner{
+background:linear-gradient(135deg,rgba(0,0,0,.9),rgba(0,0,0,.7)),url(https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?fm=jpg&q=80&w=1920) center/cover fixed;
+padding:5rem 2rem;text-align:center}
+.about-banner h2{font-size:2.8rem;font-weight:800;margin-bottom:1.5rem}
+.about-banner h2 span{color:var(--orange)}
+.about-banner p{max-width:700px;margin:0 auto 2rem;color:#bbb;font-size:1.15rem}
+.about-banner .cta{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:1rem 2.5rem;border-radius:50px;font-size:1.2rem;font-weight:700;text-decoration:none;transition:.3s}
+.about-banner .cta:hover{transform:scale(1.05);box-shadow:0 4px 25px rgba(37,211,102,.35)}
+
+/* FOOTER */
+footer{background:#080808;padding:3rem 2rem;text-align:center;border-top:1px solid #1a1a1a}
+footer .footer-name{font-size:1.5rem;font-weight:800;color:var(--orange);margin-bottom:.5rem}
+footer p{color:#666;font-size:.9rem}
+footer .footer-phone{margin-top:1rem;color:var(--gold);font-size:1.1rem;font-weight:600}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero-logo{font-size:2.8rem}
+.hero-sub{font-size:1.3rem}
+.section-title{font-size:1.8rem}
+.category-header{height:180px}
+.category-name{font-size:1.6rem}
+.materials-grid{grid-template-columns:1fr;padding:1rem}
+.whatsapp-float{width:42px;height:42px;bottom:15px;left:10px}
+.whatsapp-float svg{width:28px;height:28px}
+.about-banner h2{font-size:1.8rem}
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:#0d0d0d}
+::-webkit-scrollbar-thumb{background:#444;border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--orange)}
 </style>
 </head>
 <body>
 
+<!-- HERO -->
 <section class="hero">
-    <div class="hero-logo">JF SUCATAS</div>
-    <div class="hero-sub">O melhor preço da região!</div>
-    <p>Compramos cobre, alumínio, ferro, plástico e muito mais.</p>
-    <a class="hero-btn" href="https://api.whatsapp.com/send?phone=5544997104322">FALE CONOSCO</a>
+<div class="hero-logo">JF Sucatas</div>
+<div class="hero-sub">⭐ Pagamos o Melhor Preço da Região ⭐</div>
+<p class="hero-tagline">Compramos todo tipo de sucata — cobre, alumínio, ferro, plástico, PET, inox e muito mais. Pesamos na hora e pagamos em dinheiro!</p>
+<a class="hero-btn" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20os%20pre%C3%A7os%20da%20sucata." target="_blank" rel="noopener noreferrer">💬 FALE CONOSCO AGORA</a>
+<p class="hero-price">📞 (44) 99710-4322</p>
 </section>
 
+<!-- CATÁLOGO -->
 <div class="section">
-    <h2 class="section-title">NOSSOS MATERIAIS</h2>
+<h2 class="section-title">📋 Nosso Catálogo</h2>
+<p class="section-desc">Clique em qualquer material para saber o preço pelo WhatsApp</p>
 
-    <div class="category">
-        <div class="category-name">🥉 Cobre</div>
-        <div class="materials-grid">
-            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Cobre%20Descascado">Cobre Fio Descascado</a>
-            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Cobre%20Mel">Cobre Mel</a>
-        </div>
-    </div>
-
-    <div class="category">
-        <div class="category-name">🥈 Alumínio</div>
-        <div class="materials-grid">
-            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Alumínio%20Perfil">Alumínio Perfil</a>
-            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Alumínio%20Panela">Alumínio Panela</a>
-        </div>
-    </div>
-
-    <div class="category">
-        <div class="category-name">⚙️ Ferro</div>
-        <div class="materials-grid">
-            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Ferro">Ferro Geral</a>
-        </div>
-    </div>
-
-    <div class="category">
-        <div class="category-name">♻️ Plástico/PET</div>
-        <div class="materials-grid">
-            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20PET">Garrafas PET</a>
-            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Plástico">Plástico Duro</a>
-        </div>
-    </div>
+<!-- COBRE -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1761665698864-02b1afa9060e?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Sucata de cobre" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🥉 Cobre</div>
+<div class="category-count">6 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Cobre%20Fio%20e%20Cabo%20Descascado." target="_blank"><span class="mat-name">Cobre Fio e Cabo Descascado</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Cobre%20Fio%20e%20Cabo%20Emcapado." target="_blank"><span class="mat-name">Cobre Fio e Cabo Emcapado</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Cobre%20Cano%20e%20Tubo." target="_blank"><span class="mat-name">Cobre Cano e Tubo</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Cobre%20Sucata%20Mista." target="_blank"><span class="mat-name">Cobre Sucata Mista</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Cobre%20de%20Motor%20Bobinado." target="_blank"><span class="mat-name">Cobre de Motor Bobinado</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Cobre%20Fio%20Esmaltado." target="_blank"><span class="mat-name">Cobre Fio Esmaltado</span></a>
+</div>
 </div>
 
-<a href="https://api.whatsapp.com/send?phone=5544997104322" class="whatsapp-float">💬 WhatsApp</a>
+<!-- ALUMÍNIO -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1767459516949-cbc6d219a595?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Sucata de alumínio" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🪶 Alumínio</div>
+<div class="category-count">6 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Alum%C3%ADnio%20Perfilado." target="_blank"><span class="mat-name">Alumínio Perfilado</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Alum%C3%ADnio%20Laminado." target="_blank"><span class="mat-name">Alumínio Laminado</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Alum%C3%ADnio%20Latinha." target="_blank"><span class="mat-name">Alumínio Latinha</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Alum%C3%ADnio%20Fundido." target="_blank"><span class="mat-name">Alumínio Fundido</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Alum%C3%ADnio%20Cabo%20El%C3%A9trico." target="_blank"><span class="mat-name">Alumínio Cabo Elétrico</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Alum%C3%ADnio%20de%20Radiador." target="_blank"><span class="mat-name">Alumínio de Radiador</span></a>
+</div>
+</div>
+
+<!-- LATÃO -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1619365566184-272a34acfeb9?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Sucata de latão" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🔩 Latão</div>
+<div class="category-count">4 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Lat%C3%A3o%20Torneira%20e%20Registro." target="_blank"><span class="mat-name">Latão Torneira e Registro</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Lat%C3%A3o%20Pe%C3%A7as%20Decorativas." target="_blank"><span class="mat-name">Latão Peças Decorativas</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Lat%C3%A3o%20Estojo%20de%20Muni%C3%A7%C3%A3o." target="_blank"><span class="mat-name">Latão Estojo de Munição</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Lat%C3%A3o%20Sucata%20Mista." target="_blank"><span class="mat-name">Latão Sucata Mista</span></a>
+</div>
+</div>
+
+<!-- BRONZE -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1622336141805-70c559e141c8?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Sucata de bronze" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🏆 Bronze</div>
+<div class="category-count">2 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Bronze%20Bucha%20e%20Mancal." target="_blank"><span class="mat-name">Bronze Bucha e Mancal</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Bronze%20Sucata%20Mista." target="_blank"><span class="mat-name">Bronze Sucata Mista</span></a>
+</div>
+</div>
+
+<!-- ZINCO -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1767341372202-89cbaa6b5c87?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Sucata de zinco" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">⚙️ Zinco</div>
+<div class="category-count">2 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Zinco%20Telha%20e%20Calha." target="_blank"><span class="mat-name">Zinco Telha e Calha</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Zinco%20Pe%C3%A7a%20Fundida." target="_blank"><span class="mat-name">Zinco Peça Fundida</span></a>
+</div>
+</div>
+
+<!-- CHUMBO -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1661615342785-9a02a05ec90b?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Sucata de chumbo - bateria automotiva" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🔋 Chumbo</div>
+<div class="category-count">4 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Chumbo%20Bateria%20Automotiva." target="_blank"><span class="mat-name">Chumbo Bateria Automotiva</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Chumbo%20Peso%20de%20Balanceamento." target="_blank"><span class="mat-name">Chumbo Peso de Balanceamento</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Chumbo%20de%20Pesca." target="_blank"><span class="mat-name">Chumbo de Pesca</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Chumbo%20Chapa." target="_blank"><span class="mat-name">Chumbo Chapa</span></a>
+</div>
+</div>
+
+<!-- INOX -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1622336141805-70c559e141c8?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Sucata de inox" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🍴 Inox</div>
+<div class="category-count">3 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Inox%20Panelas%20e%20Talheres." target="_blank"><span class="mat-name">Inox Panelas e Talheres</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Inox%20Chapa%20e%20Tubo." target="_blank"><span class="mat-name">Inox Chapa e Tubo</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Inox%20Pe%C3%A7a%20Industrial." target="_blank"><span class="mat-name">Inox Peça Industrial</span></a>
+</div>
+</div>
+
+<!-- OUTROS METAIS -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1767341372202-89cbaa6b5c87?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Sucata mista de metais" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🔬 Outros Metais</div>
+<div class="category-count">3 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20N%C3%ADquel." target="_blank"><span class="mat-name">Níquel</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Estanho." target="_blank"><span class="mat-name">Estanho</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Sucata%20Mista%20N%C3%A3o%20Ferrosa." target="_blank"><span class="mat-name">Sucata Mista Não Ferrosa</span></a>
+</div>
+</div>
+
+<!-- PLÁSTICOS RÍGIDOS -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1710189605149-6cb6b81e5e9e?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Sucata de plásticos rígidos" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">📦 Plásticos Rígidos</div>
+<div class="category-count">15 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Balde%20Pl%C3%A1stico." target="_blank"><span class="mat-name">Balde</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Bacia%20Pl%C3%A1stica." target="_blank"><span class="mat-name">Bacia</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Cadeira%20Pl%C3%A1stica." target="_blank"><span class="mat-name">Cadeira Plástica</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Mesa%20Pl%C3%A1stica." target="_blank"><span class="mat-name">Mesa Plástica</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Tambor%20Pl%C3%A1stico." target="_blank"><span class="mat-name">Tambor Plástico</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Bombona." target="_blank"><span class="mat-name">Bombona</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Engradado%20de%20Bebida." target="_blank"><span class="mat-name">Engradado de Bebida</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Caixa%20Organizadora." target="_blank"><span class="mat-name">Caixa Organizadora</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Brinquedo%20de%20Pl%C3%A1stico%20Duro." target="_blank"><span class="mat-name">Brinquedo de Plástico Duro</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Embalagem%20de%20Shampoo." target="_blank"><span class="mat-name">Embalagem de Shampoo</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Embalagem%20de%20Detergente." target="_blank"><span class="mat-name">Embalagem de Detergente</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Embalagem%20de%20Amaciante." target="_blank"><span class="mat-name">Embalagem de Amaciante</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Tampa%20de%20Garrafa." target="_blank"><span class="mat-name">Tampa de Garrafa</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Pote%20de%20Margarina." target="_blank"><span class="mat-name">Pote de Margarina</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Pote%20de%20Sorvete." target="_blank"><span class="mat-name">Pote de Sorvete</span></a>
+</div>
+</div>
+
+<!-- PLÁSTICOS DESCARTÁVEIS -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1710189605149-6cb6b81e5e9e?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Plásticos descartáveis" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🥤 Plásticos Descartáveis</div>
+<div class="category-count">2 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Canudo%20Pl%C3%A1stico." target="_blank"><span class="mat-name">Canudo</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Copo%20Descart%C3%A1vel." target="_blank"><span class="mat-name">Copo Descartável</span></a>
+</div>
+</div>
+
+<!-- PVC -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1529269421632-e9253d14d3a9?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Canos PVC" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🔧 PVC</div>
+<div class="category-count">5 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Cano%20PVC." target="_blank"><span class="mat-name">Cano PVC</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Tubo%20PVC." target="_blank"><span class="mat-name">Tubo PVC</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Conex%C3%A3o%20PVC." target="_blank"><span class="mat-name">Conexão PVC</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Mangueira." target="_blank"><span class="mat-name">Mangueira</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Perfil%20de%20PVC." target="_blank"><span class="mat-name">Perfil de PVC</span></a>
+</div>
+</div>
+
+<!-- PET -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1653406384710-08688ec6b979?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Garrafas PET" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🧴 PET</div>
+<div class="category-count">2 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Garrafa%20PET." target="_blank"><span class="mat-name">Garrafa PET</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Tampa%20PET." target="_blank"><span class="mat-name">Tampa PET</span></a>
+</div>
+</div>
+
+<!-- STRETCH / PLÁSTICO MISTO -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1743342716826-1fb32cc467d9?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Plástico filme e misto" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">🔄 Plástico Filme / Misto</div>
+<div class="category-count">2 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Pl%C3%A1stico%20Filme%20Stretch." target="_blank"><span class="mat-name">Plástico Filme Stretch</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Sucata%20Pl%C3%A1stica%20Mista." target="_blank"><span class="mat-name">Sucata Plástica Mista</span></a>
+</div>
+</div>
+
+<!-- FERRO E AÇO -->
+<div class="category">
+<div class="category-header">
+<img src="https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Sucata de ferro e aço" loading="lazy">
+<div class="overlay"></div>
+<div class="category-name">⛓️ Ferro e Aço</div>
+<div class="category-count">28 materiais</div>
+</div>
+<div class="materials-grid">
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Ferro%20Sucata%20Mista." target="_blank"><span class="mat-name">Ferro Sucata Mista</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Ferro%20Fundido." target="_blank"><span class="mat-name">Ferro Fundido</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Ferro%20Forjado." target="_blank"><span class="mat-name">Ferro Forjado</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Ferro%20de%20Constru%C3%A7%C3%A3o%20(vergalh%C3%A3o)." target="_blank"><span class="mat-name">Ferro de Construção (vergalhão)</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Ferro%20de%20Grade%20e%20Port%C3%A3o." target="_blank"><span class="mat-name">Ferro de Grade e Portão</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Ferro%20de%20M%C3%A1quina%20e%20Equipamento." target="_blank"><span class="mat-name">Ferro de Máquina e Equipamento</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20A%C3%A7o%20Carbono%20Chapa." target="_blank"><span class="mat-name">Aço Carbono Chapa</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20A%C3%A7o%20Carbono%20Tubo." target="_blank"><span class="mat-name">Aço Carbono Tubo</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20A%C3%A7o%20Carbono%20Perfil%20(viga,%20trilho)." target="_blank"><span class="mat-name">Aço Carbono Perfil (viga, trilho)</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20A%C3%A7o%20Carbono%20Barra%20e%20Eixo." target="_blank"><span class="mat-name">Aço Carbono Barra e Eixo</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20A%C3%A7o%20Laminado." target="_blank"><span class="mat-name">Aço Laminado</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Sucata%20de%20A%C3%A7o%20Mista." target="_blank"><span class="mat-name">Sucata de Aço Mista</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Sucata%20Pesada%20(bloco,%20maquin%C3%A1rio)." target="_blank"><span class="mat-name">Sucata Pesada (bloco, maquinário)</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Cavaco%20de%20Ferro%20e%20A%C3%A7o." target="_blank"><span class="mat-name">Cavaco de Ferro e Aço</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Fio%20de%20A%C3%A7o%20(arame)." target="_blank"><span class="mat-name">Fio de Aço (arame)</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Arame%20Recozido." target="_blank"><span class="mat-name">Arame Recozido</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20A%C3%A7o%20Galvanizado." target="_blank"><span class="mat-name">Aço Galvanizado</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Sucata%20de%20Usina." target="_blank"><span class="mat-name">Sucata de Usina</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Sucata%20de%20Demoli%C3%A7%C3%A3o%20(ferro%20estrutural)." target="_blank"><span class="mat-name">Sucata de Demolição (ferro estrutural)</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Prego%20e%20Parafuso." target="_blank"><span class="mat-name">Prego e Parafuso</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Corrente%20de%20Ferro." target="_blank"><span class="mat-name">Corrente de Ferro</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Caldeira%20e%20Tanque%20de%20A%C3%A7o." target="_blank"><span class="mat-name">Caldeira e Tanque de Aço</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Sucata%20de%20Autom%C3%B3vel%20(carroceria,%20lataria)." target="_blank"><span class="mat-name">Sucata de Automóvel (carroceria)</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Sucata%20de%20Caminh%C3%A3o." target="_blank"><span class="mat-name">Sucata de Caminhão</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Pe%C3%A7a%20de%20M%C3%A1quina%20Agr%C3%ADcola." target="_blank"><span class="mat-name">Peça de Máquina Agrícola</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Ferro%20de%20Eletrodom%C3%A9stico%20(carca%C3%A7a)." target="_blank"><span class="mat-name">Ferro de Eletrodoméstico (carcaça)</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20do%20Radiador%20de%20Ferro." target="_blank"><span class="mat-name">Radiador de Ferro</span></a>
+<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20quanto%20voc%C3%AA%20paga%20no%20quilo%20da%20Panela%20de%20Ferro%20e%20Ferragem." target="_blank"><span class="mat-name">Panela de Ferro e Ferragem</span></a>
+</div>
+</div>
+
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-works">
+<h2>⚡ Como Funciona</h2>
+<div class="steps">
+<div class="step">
+<div class="step-icon">📸</div>
+<h3>1. Escolha o Material</h3>
+<p>Navegue pelo catálogo e clique no material que você tem.</p>
+</div>
+<div class="step">
+<div class="step-icon">💬</div>
+<h3>2. Fale Conosco</h3>
+<p>O WhatsApp abre automaticamente com a mensagem certa.</p>
+</div>
+<div class="step">
+<div class="step-icon">💰</div>
+<h3>3. Receba o Melhor Preço</h3>
+<p>Te pagamos o melhor preço da região na hora! Dinheiro na mão.</p>
+</div>
+</div>
+</section>
+
+<!-- ABOUT BANNER -->
+<section class="about-banner">
+<h2>🏭 <span>JF Sucatas</span></h2>
+<p>Somos referência na compra de sucatas em toda a região. Pesamos na hora, pagamos o melhor preço e ainda buscamos em grande quantidade. Recicle e ganhe dinheiro com a gente!</p>
+<a class="cta" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20os%20pre%C3%A7os%20da%20sucata." target="_blank">
+<svg style="width:24px;height:24px;fill:#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+Fale Conosco no WhatsApp
+</a>
+</section>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a class="whatsapp-float" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20os%20pre%C3%A7os%20da%20sucata." target="_blank" aria-label="Fale conosco no WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-name">JF Sucatas</div>
+<p>Compramos todo tipo de sucata — Pagamos o melhor preço da região!</p>
+<p>Pesamos na hora • Pagamento em dinheiro • Buscamos em grande quantidade</p>
+<div class="footer-phone">📞 (44) 99710-4322</div>
+<p style="margin-top:1.5rem;font-size:.8rem">© 2026 JF Sucatas. Todos os direitos reservados.</p>
+</footer>
 
 </body>
 </html>
