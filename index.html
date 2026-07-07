@@ -4,146 +4,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JF Sucatas - Compramos Sucata | Melhor Preço da Região</title>
-<meta name="description" content="JF Sucatas - Compramos todo tipo de sucata. Cobre, alumínio, ferro, plástico, PET e muito mais. Pagamos o melhor preço da região!">
-<meta property="og:title" content="JF Sucatas - Compramos Sucata | Melhor Preço em Dinheiro">
-<meta property="og:description" content="Pagamos o melhor preço da região! Compramos ferro, cobre, alumínio, plástico e muito mais.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?fm=jpg&q=80&w=1200&h=630&fit=crop">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://site.zapia.com/ax4yiipe">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?fm=jpg&q=80&w=1200&h=630&fit=crop">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--orange:#f57c00;--orange-dark:#e65100;--dark:#1a1a1a;--darker:#0d0d0d;--gray:#333;--light-gray:#555;--white:#f5f5f5;--gold:#ffb300}
-body{font-family:-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;background:var(--darker);color:var(--white);line-height:1.6}
+:root{--orange:#f57c00;--orange-dark:#e65100;--dark:#1a1a1a;--darker:#0d0d0d;--white:#f5f5f5;--gold:#ffb300}
+body{font-family:sans-serif;background:var(--darker);color:var(--white);line-height:1.6}
 
 /* HERO */
-.hero{
-min-height:100vh;
-background:linear-gradient(135deg,rgba(0,0,0,.92),rgba(0,0,0,.7)),url(https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?fm=jpg&q=80&w=1920&h=1080&fit=crop) center/cover fixed;
-display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;position:relative}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,var(--darker))}
-.hero-logo{font-size:4.5rem;font-weight:900;letter-spacing:4px;text-transform:uppercase;color:var(--orange);text-shadow:0 0 40px rgba(245,124,0,.3);margin-bottom:.5rem}
-.hero-sub{font-size:1.8rem;font-weight:700;color:var(--gold);margin-bottom:1rem}
-.hero-tagline{font-size:1.3rem;color:#aaa;max-width:600px;margin-bottom:2rem}
-.hero-btn{display:inline-block;background:var(--orange);color:var(--dark);padding:1rem 3rem;border-radius:50px;font-size:1.2rem;font-weight:700;text-decoration:none;transition:.3s;border:2px solid var(--orange)}
-.hero-btn:hover{background:transparent;color:var(--orange);transform:scale(1.05)}
-.hero-price{font-size:1.1rem;color:var(--gold);margin-top:1.5rem;font-weight:600}
-
-/* FLOATING WHATSAPP */
-.whatsapp-float{
-position:fixed;bottom:25px;left:15px;z-index:9999999;background:#25d366;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:.3s;text-decoration:none;animation:pulse 2s infinite;cursor:pointer}
-.whatsapp-float:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.6)}
-.whatsapp-float svg{width:26px;height:26px;fill:#fff;display:block;pointer-events:none}
-@keyframes pulse{0%{box-shadow:0 4px 20px rgba(37,211,102,.5)}50%{box-shadow:0 4px 30px rgba(37,211,102,.7)}100%{box-shadow:0 4px 20px rgba(37,211,102,.5)}}
+.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;background:#111}
+.hero-logo{font-size:3rem;font-weight:900;color:var(--orange);margin-bottom:1rem}
+.hero-sub{font-size:1.5rem;color:var(--gold);margin-bottom:1rem}
+.hero-btn{display:inline-block;background:var(--orange);color:black;padding:1rem 2rem;border-radius:50px;font-weight:700;text-decoration:none;margin-top:1rem}
 
 /* SECTIONS */
-.section{padding:4rem 1rem;max-width:1400px;margin:0 auto}
-.section-title{font-size:2.5rem;font-weight:800;text-align:center;margin-bottom:.5rem;text-transform:uppercase;position:relative;display:inline-block;left:50%;transform:translateX(-50%)}
-.section-title::after{content:'';display:block;width:80px;height:4px;background:var(--orange);margin:.8rem auto 0;border-radius:2px}
-.section-desc{text-align:center;color:#888;margin-bottom:3rem;font-size:1.1rem}
+.section{padding:3rem 1rem;max-width:800px;margin:0 auto}
+.section-title{text-align:center;font-size:2rem;color:var(--orange);margin-bottom:2rem}
 
 /* CATEGORY */
-.category{margin-bottom:3rem;background:linear-gradient(135deg,#1a1a1a,#222);border-radius:16px;overflow:hidden;border:1px solid #2a2a2a;transition:.3s}
-.category:hover{border-color:var(--orange);box-shadow:0 0 30px rgba(245,124,0,.1)}
-.category-header{position:relative;height:250px;overflow:hidden;display:flex;align-items:flex-end;padding:2rem}
-.category-header img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:.5}
-.category-header .overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(transparent 30%,rgba(0,0,0,.95))}
-.category-name{position:relative;z-index:2;font-size:2.2rem;font-weight:800;color:var(--orange);text-shadow:0 2px 10px rgba(0,0,0,.8)}
-.category-count{position:relative;z-index:2;color:#aaa;font-size:.95rem;margin-top:.3rem}
+.category{margin-bottom:2rem;background:#222;padding:1.5rem;border-radius:10px}
+.category-name{font-size:1.5rem;font-weight:bold;margin-bottom:1rem;color:var(--orange)}
+.materials-grid{display:grid;gap:10px}
+.material-item{display:block;background:#333;padding:1rem;border-radius:5px;color:white;text-decoration:none;transition:0.3s}
+.material-item:hover{background:var(--orange);color:black}
 
-/* MATERIALS GRID */
-.materials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;padding:1.5rem}
-.material-item{display:block;background:#252525;border-radius:10px;padding:.8rem 1rem;text-decoration:none;color:var(--white);border:1px solid #333;transition:.25s;position:relative;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.material-item::before{content:'💬';margin-right:8px;font-size:.9rem}
-.material-item:hover{background:var(--orange);color:var(--dark);border-color:var(--orange);transform:translateY(-2px);box-shadow:0 4px 15px rgba(245,124,0,.25)}
-.material-item .mat-name{font-weight:600;font-size:.95rem}
-
-/* HOW IT WORKS */
-.how-works{background:linear-gradient(135deg,#111,#1a1a1a);padding:4rem 1rem;text-align:center}
-.how-works h2{font-size:2.5rem;font-weight:800;margin-bottom:3rem;text-transform:uppercase}
-.steps{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;max-width:1000px;margin:0 auto}
-.step{flex:1;min-width:200px;max-width:300px;padding:2rem;background:#1a1a1a;border-radius:12px;border:1px solid #2a2a2a;transition:.3s}
-.step:hover{border-color:var(--orange)}
-.step-icon{font-size:3rem;margin-bottom:1rem}
-.step h3{font-size:1.2rem;margin-bottom:.5rem;color:var(--orange)}
-.step p{color:#999;font-size:.95rem}
-
-/* ABOUT BANNER */
-.about-banner{
-background:linear-gradient(135deg,rgba(0,0,0,.9),rgba(0,0,0,.7)),url(https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?fm=jpg&q=80&w=1920) center/cover fixed;
-padding:5rem 2rem;text-align:center}
-.about-banner h2{font-size:2.8rem;font-weight:800;margin-bottom:1.5rem}
-.about-banner h2 span{color:var(--orange)}
-.about-banner p{max-width:700px;margin:0 auto 2rem;color:#bbb;font-size:1.15rem}
-.about-banner .cta{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:1rem 2.5rem;border-radius:50px;font-size:1.2rem;font-weight:700;text-decoration:none;transition:.3s}
-.about-banner .cta:hover{transform:scale(1.05);box-shadow:0 4px 25px rgba(37,211,102,.35)}
-
-/* FOOTER */
-footer{background:#080808;padding:3rem 2rem;text-align:center;border-top:1px solid #1a1a1a}
-footer .footer-name{font-size:1.5rem;font-weight:800;color:var(--orange);margin-bottom:.5rem}
-footer p{color:#666;font-size:.9rem}
-footer .footer-phone{margin-top:1rem;color:var(--gold);font-size:1.1rem;font-weight:600}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-.hero-logo{font-size:2.8rem}
-.hero-sub{font-size:1.3rem}
-.section-title{font-size:1.8rem}
-.category-header{height:180px}
-.category-name{font-size:1.6rem}
-.materials-grid{grid-template-columns:1fr;padding:1rem}
-.whatsapp-float{width:42px;height:42px;bottom:15px;left:10px}
-.whatsapp-float svg{width:28px;height:28px}
-.about-banner h2{font-size:1.8rem}
-}
+/* WHATSAPP FLOAT */
+.whatsapp-float{position:fixed;bottom:20px;left:20px;background:#25d366;padding:15px;border-radius:50px;color:white;text-decoration:none;font-weight:bold}
 </style>
 </head>
 <body>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://api.whatsapp.com/send?phone=5544997104322" class="whatsapp-float" target="_blank">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.938 3.659 1.432 5.628 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
-<!-- HERO -->
 <section class="hero">
-<div class="hero-logo">JF Sucatas</div>
-<div class="hero-sub">⭐ Pagamos o Melhor Preço da Região ⭐</div>
-<p class="hero-tagline">Compramos todo tipo de sucata — cobre, alumínio, ferro, plástico, PET, inox e muito mais. Pesamos na hora e pagamos em dinheiro!</p>
-<a class="hero-btn" href="https://api.whatsapp.com/send?phone=5544997104322&text=Ol%C3%A1!%20Gostaria%20de%20saber%20os%20pre%C3%A7os%20da%20sucata." target="_blank">💬 FALE CONOSCO AGORA</a>
-<p class="hero-price">📞 (44) 99710-4322</p>
+    <div class="hero-logo">JF SUCATAS</div>
+    <div class="hero-sub">O melhor preço da região!</div>
+    <p>Compramos cobre, alumínio, ferro, plástico e muito mais.</p>
+    <a class="hero-btn" href="https://api.whatsapp.com/send?phone=5544997104322">FALE CONOSCO</a>
 </section>
 
-<!-- CATÁLOGO (Início das categorias...) -->
 <div class="section">
-<h2 class="section-title">📋 Nosso Catálogo</h2>
-<p class="section-desc">Clique em qualquer material para saber o preço pelo WhatsApp</p>
+    <h2 class="section-title">NOSSOS MATERIAIS</h2>
 
-<!-- COBRE -->
-<div class="category">
-<div class="category-header">
-<img src="https://images.unsplash.com/photo-1761665698864-02b1afa9060e?fm=jpg&q=80&w=1200&h=500&fit=crop" alt="Cobre">
-<div class="overlay"></div>
-<div class="category-name">🥉 Cobre</div>
-</div>
-<div class="materials-grid">
-<a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20saber%20o%20preço%20do%20Cobre%20Descascado"><span class="mat-name">Cobre Fio Descascado</span></a>
-<!-- Adicione os outros aqui conforme o padrão -->
-</div>
+    <div class="category">
+        <div class="category-name">🥉 Cobre</div>
+        <div class="materials-grid">
+            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Cobre%20Descascado">Cobre Fio Descascado</a>
+            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Cobre%20Mel">Cobre Mel</a>
+        </div>
+    </div>
+
+    <div class="category">
+        <div class="category-name">🥈 Alumínio</div>
+        <div class="materials-grid">
+            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Alumínio%20Perfil">Alumínio Perfil</a>
+            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Alumínio%20Panela">Alumínio Panela</a>
+        </div>
+    </div>
+
+    <div class="category">
+        <div class="category-name">⚙️ Ferro</div>
+        <div class="materials-grid">
+            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Ferro">Ferro Geral</a>
+        </div>
+    </div>
+
+    <div class="category">
+        <div class="category-name">♻️ Plástico/PET</div>
+        <div class="materials-grid">
+            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20PET">Garrafas PET</a>
+            <a class="material-item" href="https://api.whatsapp.com/send?phone=5544997104322&text=Quero%20vender%20Plástico">Plástico Duro</a>
+        </div>
+    </div>
 </div>
 
-<!-- ... continuação das outras categorias ... -->
-
-</div>
-
-<footer>
-<div class="footer-name">JF SUCATAS</div>
-<p>Transformando sucata em oportunidade.</p>
-<p class="footer-phone">📍 Maringá e Região | (44) 99710-4322</p>
-</footer>
+<a href="https://api.whatsapp.com/send?phone=5544997104322" class="whatsapp-float">💬 WhatsApp</a>
 
 </body>
 </html>
